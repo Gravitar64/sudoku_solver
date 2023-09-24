@@ -167,7 +167,7 @@ if __name__ == '__main__':
 	# result = sudoku_solve(matrix)
 	# print "-----------"
 	# print read_write.sudoku_html_table(result)
-	filename = sys.argv[1]
+	filename = "sudoku_puzzle.png"
 	if len(filename) > 3: 
 		extension = filename[-3:]
 		image_arr = None

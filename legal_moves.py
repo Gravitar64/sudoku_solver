@@ -81,8 +81,8 @@ def quadrant_legal(item, x, y, puzzle_matrix):
 		Tells you if that move is legal or not.
 	'''
 	#0, 1, or 2
-	qx = x / 3
-	qy = y / 3
+	qx = x // 3
+	qy = y // 3
 	i_list = range(3*qx, 3*qx + 3)
 	j_list = range(3*qy, 3*qy + 3)
 	for i in i_list: 
@@ -170,12 +170,12 @@ if __name__ == '__main__':
 		[7, None, 3, None, 1, 8, None, None, None]
 	]
 	# print row_legal(2, 0, 0, matrix) == False
-	print legal_move(2, 0, 0, matrix) == False
-	print legal_move_ignoring_current_cell(2, 0, 3, matrix) == True
-	print legal_move_ignoring_current_cell(7, 0, 3, matrix) == False
+	print (legal_move(2, 0, 0, matrix) == False)
+	print (legal_move_ignoring_current_cell(2, 0, 3, matrix) == True)
+	print (legal_move_ignoring_current_cell(7, 0, 3, matrix) == False)
 	
 	# print quadrant_legal(3, 3, 2, matrix) == True
-	print legal_move(3, 0, 0, matrix)
+	print (legal_move(3, 0, 0, matrix))
 	test_matrix = [
 		[None, None, None, None, None, None, 4, None, None], 
 		[None, None, None, 9, None, None, 3, 6, None], 
@@ -187,7 +187,7 @@ if __name__ == '__main__':
 		[None, 6, 8, None, None, 9, 1, None, None], 
 		[None, None, None, None, None, None, 6, None, None]
 	]
-	print row_legal(9, 6, 8, test_matrix)
+	print (row_legal(9, 6, 8, test_matrix))
 
 
 

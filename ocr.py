@@ -47,7 +47,7 @@ def image_to_array(img_name):
 		(i.e. its the number if a number is in cell (i, j)
 		and otherwise its None)
 	'''
-	ocr_string = lambda s: None if s is "" else int(s)
+	ocr_string = lambda s: int(s) if s.isdigit() else None
 	ip.write_cells_to_images(img_name)
 	sudoku_arr = [[None]*9]*9
 	for i in range(9):
